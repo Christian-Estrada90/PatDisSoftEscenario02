@@ -2,6 +2,11 @@ package ec.edu.ups.patron.creacional.builder.controller;
 
 import ec.edu.ups.patron.creacional.builder.model.ActivoFijo;
 
+/**
+ * 
+ * @author Grupo 3
+ *
+ */
 public class ActivoFijoBuilder {
 
 	private ActivoFijo activoFijo;

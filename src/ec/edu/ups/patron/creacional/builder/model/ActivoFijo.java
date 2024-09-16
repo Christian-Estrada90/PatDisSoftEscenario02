@@ -1,5 +1,10 @@
 package ec.edu.ups.patron.creacional.builder.model;
 
+/**
+ * 
+ * @author Grupo 3
+ *
+ */
 public class ActivoFijo {
 
 	private int codigo;

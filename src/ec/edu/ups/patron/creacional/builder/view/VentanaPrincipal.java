@@ -6,6 +6,11 @@ import javax.swing.table.DefaultTableModel;
 import ec.edu.ups.patron.creacional.builder.controller.ActivoFijoBuilder;
 import ec.edu.ups.patron.creacional.builder.model.ActivoFijo;
 
+/**
+ * 
+ * @author Grupo 3
+ *
+ */
 public class VentanaPrincipal extends javax.swing.JFrame {
 	DefaultTableModel tblModel = new DefaultTableModel();
 
@@ -28,16 +33,16 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 	private void initComponents() {
 
 		jPanel1 = new javax.swing.JPanel();
-		jLabel1 = new javax.swing.JLabel();
-		jLabel2 = new javax.swing.JLabel();
-		jLabel3 = new javax.swing.JLabel();
-		jLabel4 = new javax.swing.JLabel();
-		jLabel5 = new javax.swing.JLabel();
+		lblCodigo = new javax.swing.JLabel();
+		lblNombre = new javax.swing.JLabel();
+		lblPrecio = new javax.swing.JLabel();
+		lblProcesador = new javax.swing.JLabel();
+		lblMemoriaRam = new javax.swing.JLabel();
 		jLabel6 = new javax.swing.JLabel();
-		jLabel7 = new javax.swing.JLabel();
-		jLabel8 = new javax.swing.JLabel();
-		jLabel9 = new javax.swing.JLabel();
-		jLabel10 = new javax.swing.JLabel();
+		lblPlaca = new javax.swing.JLabel();
+		lblNumChasis = new javax.swing.JLabel();
+		lblNumCajones = new javax.swing.JLabel();
+		lblNumPatas = new javax.swing.JLabel();
 		txtCodigo = new javax.swing.JTextField();
 		txtNombre = new javax.swing.JTextField();
 		txtPrecio = new javax.swing.JTextField();
@@ -48,9 +53,9 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		txtNumeroCajones = new javax.swing.JTextField();
 		txtNumeroPatas = new javax.swing.JTextField();
 		btnCrear = new javax.swing.JButton();
-		jLabel11 = new javax.swing.JLabel();
+		lblActivosFijos = new javax.swing.JLabel();
 		cmbTipo = new javax.swing.JComboBox<>();
-		jLabel12 = new javax.swing.JLabel();
+		lblTipo = new javax.swing.JLabel();
 		jScrollPane1 = new javax.swing.JScrollPane();
 		tblInformacion = new javax.swing.JTable();
 
@@ -58,32 +63,32 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
 		jPanel1.setLayout(new java.awt.GridLayout(1, 0));
 
-		jLabel1.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel1.setText("Codigo:");
+		lblCodigo.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblCodigo.setText("Codigo:");
 
-		jLabel2.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel2.setText("Nombre:");
+		lblNombre.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblNombre.setText("Nombre:");
 
-		jLabel3.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel3.setText("Precio:");
+		lblPrecio.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblPrecio.setText("Precio:");
 
-		jLabel4.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel4.setText("Procesador:");
+		lblProcesador.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblProcesador.setText("Procesador:");
 
-		jLabel5.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel5.setText("Memoria Ram:");
+		lblMemoriaRam.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblMemoriaRam.setText("Memoria Ram:");
 
-		jLabel7.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel7.setText("Placa:");
+		lblPlaca.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblPlaca.setText("Placa:");
 
-		jLabel8.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel8.setText("Número Chasis:");
+		lblNumChasis.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblNumChasis.setText("Número Chasis:");
 
-		jLabel9.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel9.setText("Número Cajones:");
+		lblNumCajones.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblNumCajones.setText("Número Cajones:");
 
-		jLabel10.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel10.setText("Número Patas:");
+		lblNumPatas.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblNumPatas.setText("Número Patas:");
 
 		txtCodigo.setFont(new java.awt.Font("Arial Narrow", 0, 12));
 
@@ -110,24 +115,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		btnCrear.setText("Crear");
 		btnCrear.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				btnCrearActionPerformed(evt);
+				btnCrearActivo(evt);
 			}
 		});
 
-		jLabel11.setFont(new java.awt.Font("Arial Narrow", 0, 14));
-		jLabel11.setText("ACTIVOS FIJOS");
+		lblActivosFijos.setFont(new java.awt.Font("Arial Narrow", 0, 14));
+		lblActivosFijos.setText("ACTIVOS FIJOS");
 
 		cmbTipo.setFont(new java.awt.Font("Arial Narrow", 0, 12));
 		cmbTipo.setModel(
 				new javax.swing.DefaultComboBoxModel<>(new String[] { "COMPUTADOR", "MESA", "SILLA", "AUTO" }));
 		cmbTipo.addItemListener(new java.awt.event.ItemListener() {
 			public void itemStateChanged(java.awt.event.ItemEvent evt) {
-				cmbTipoItemStateChanged(evt);
+				cmbTipoChanged(evt);
 			}
 		});
 
-		jLabel12.setFont(new java.awt.Font("Arial Narrow", 0, 12));
-		jLabel12.setText("TIPO:");
+		lblTipo.setFont(new java.awt.Font("Arial Narrow", 0, 12));
+		lblTipo.setText("TIPO:");
 
 		tblInformacion
 				.setModel(new javax.swing.table.DefaultTableModel(
@@ -146,14 +151,14 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 								.addGroup(layout.createSequentialGroup()
 										.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-												.addComponent(jLabel1).addComponent(jLabel2).addComponent(jLabel3)
-												.addComponent(jLabel4))
+												.addComponent(lblCodigo).addComponent(lblNombre).addComponent(lblPrecio)
+												.addComponent(lblProcesador))
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED,
 												javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 								.addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
 										.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-												.addComponent(jLabel9).addComponent(jLabel8).addComponent(jLabel10))
+												.addComponent(lblNumCajones).addComponent(lblNumChasis).addComponent(lblNumPatas))
 										.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
 										.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
 												.addComponent(txtNumeroChasis)
@@ -164,8 +169,8 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 										javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 								.addGroup(layout.createSequentialGroup()
 										.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-												.addComponent(jLabel5)
-												.addGroup(layout.createSequentialGroup().addComponent(jLabel7)
+												.addComponent(lblMemoriaRam)
+												.addGroup(layout.createSequentialGroup().addComponent(lblPlaca)
 														.addPreferredGap(
 																javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 														.addComponent(jLabel6)))
@@ -174,7 +179,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 												.addComponent(txtPlaca).addComponent(txtMemoriaRam)
 												.addComponent(txtProcesador).addComponent(txtPrecio)
 												.addComponent(txtNombre).addComponent(txtCodigo)))
-								.addGroup(layout.createSequentialGroup().addComponent(jLabel12).addGap(18, 18, 18)
+								.addGroup(layout.createSequentialGroup().addComponent(lblTipo).addGap(18, 18, 18)
 										.addComponent(cmbTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 119,
 												javax.swing.GroupLayout.PREFERRED_SIZE)
 										.addGap(0, 65, Short.MAX_VALUE)))
@@ -182,37 +187,37 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 						.addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 910,
 								javax.swing.GroupLayout.PREFERRED_SIZE)
 						.addContainerGap())
-				.addGroup(layout.createSequentialGroup().addGap(49, 49, 49).addComponent(jLabel11).addGap(0, 0,
+				.addGroup(layout.createSequentialGroup().addGap(49, 49, 49).addComponent(lblActivosFijos).addGap(0, 0,
 						Short.MAX_VALUE)));
 		layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
-				.createSequentialGroup().addComponent(jLabel11)
+				.createSequentialGroup().addComponent(lblActivosFijos)
 				.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
 						.createSequentialGroup()
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
 								.addComponent(cmbTipo, javax.swing.GroupLayout.PREFERRED_SIZE,
 										javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addComponent(jLabel12))
+								.addComponent(lblTipo))
 						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(jLabel1).addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE,
+								.addComponent(lblCodigo).addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE,
 										javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(jLabel2).addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE,
+								.addComponent(lblNombre).addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE,
 										javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(jLabel3).addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE,
+								.addComponent(lblPrecio).addComponent(txtPrecio, javax.swing.GroupLayout.PREFERRED_SIZE,
 										javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(jLabel4).addComponent(txtProcesador,
+								.addComponent(lblProcesador).addComponent(txtProcesador,
 										javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
 										javax.swing.GroupLayout.PREFERRED_SIZE))
 						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(jLabel5).addComponent(txtMemoriaRam,
+								.addComponent(lblMemoriaRam).addComponent(txtMemoriaRam,
 										javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
 										javax.swing.GroupLayout.PREFERRED_SIZE))
 						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -225,24 +230,24 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 												javax.swing.GroupLayout.PREFERRED_SIZE))
 								.addGroup(layout.createSequentialGroup()
 										.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-												.addComponent(jLabel7).addComponent(txtPlaca,
+												.addComponent(lblPlaca).addComponent(txtPlaca,
 														javax.swing.GroupLayout.PREFERRED_SIZE,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														javax.swing.GroupLayout.PREFERRED_SIZE))
 										.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 										.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-												.addComponent(jLabel8).addComponent(txtNumeroChasis,
+												.addComponent(lblNumChasis).addComponent(txtNumeroChasis,
 														javax.swing.GroupLayout.PREFERRED_SIZE,
 														javax.swing.GroupLayout.DEFAULT_SIZE,
 														javax.swing.GroupLayout.PREFERRED_SIZE))))
 						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(jLabel9).addComponent(txtNumeroCajones,
+								.addComponent(lblNumCajones).addComponent(txtNumeroCajones,
 										javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
 										javax.swing.GroupLayout.PREFERRED_SIZE))
 						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-								.addComponent(jLabel10).addComponent(txtNumeroPatas,
+								.addComponent(lblNumPatas).addComponent(txtNumeroPatas,
 										javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
 										javax.swing.GroupLayout.PREFERRED_SIZE))
 						.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED).addComponent(btnCrear)
@@ -253,7 +258,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		pack();
 	}
 
-	private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {
+	private void btnCrearActivo(java.awt.event.ActionEvent evt) {
 		if (txtCodigo.getText().equals("")) {
 			JOptionPane.showMessageDialog(null, "Ingrese un Codigo");
 			return;
@@ -278,10 +283,15 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 			numeroCajones = Integer.parseInt(txtNumeroCajones.getText());
 		}
 
-		activoFijoBuilder.addCodigo(Integer.parseInt(txtCodigo.getText())).addNombre(txtNombre.getText())
-				.addPrecio(Double.valueOf(txtPrecio.getText())).addProcesador(txtProcesador.getText())
-				.addMemoriaRam(txtMemoriaRam.getText()).addPLaca(txtPlaca.getText())
-				.addNumeroChasis(txtNumeroChasis.getText()).addNumeroCajones(numeroCajones).addNumeroPatas(numeroPatas);
+		activoFijoBuilder.addCodigo(
+				Integer.parseInt(txtCodigo.getText())).addNombre(txtNombre.getText())
+				.addPrecio(Double.valueOf(txtPrecio.getText()))
+				.addProcesador(txtProcesador.getText())
+				.addMemoriaRam(txtMemoriaRam.getText())
+				.addPLaca(txtPlaca.getText())
+				.addNumeroChasis(txtNumeroChasis.getText())
+				.addNumeroCajones(numeroCajones)
+				.addNumeroPatas(numeroPatas);
 
 		ActivoFijo activoFijo = activoFijoBuilder.construir();
 
@@ -303,7 +313,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 
 	}
 
-	private void cmbTipoItemStateChanged(java.awt.event.ItemEvent evt) {
+	private void cmbTipoChanged(java.awt.event.ItemEvent evt) {
 		if (cmbTipo.getSelectedItem().toString().equals("COMPUTADOR")) {
 			txtMemoriaRam.setEnabled(true);
 			txtProcesador.setEnabled(true);
@@ -345,9 +355,6 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		}
 	}
 
-	/**
-	 * @param args the command line arguments
-	 */
 	public static void main(String args[]) {
 		try {
 			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -377,21 +384,20 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 		});
 	}
 
-	// Variables declaration - do not modify//GEN-BEGIN:variables
 	private javax.swing.JButton btnCrear;
 	private javax.swing.JComboBox<String> cmbTipo;
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel10;
-	private javax.swing.JLabel jLabel11;
-	private javax.swing.JLabel jLabel12;
-	private javax.swing.JLabel jLabel2;
-	private javax.swing.JLabel jLabel3;
-	private javax.swing.JLabel jLabel4;
-	private javax.swing.JLabel jLabel5;
+	private javax.swing.JLabel lblCodigo;
+	private javax.swing.JLabel lblNumPatas;
+	private javax.swing.JLabel lblActivosFijos;
+	private javax.swing.JLabel lblTipo;
+	private javax.swing.JLabel lblNombre;
+	private javax.swing.JLabel lblPrecio;
+	private javax.swing.JLabel lblProcesador;
+	private javax.swing.JLabel lblMemoriaRam;
 	private javax.swing.JLabel jLabel6;
-	private javax.swing.JLabel jLabel7;
-	private javax.swing.JLabel jLabel8;
-	private javax.swing.JLabel jLabel9;
+	private javax.swing.JLabel lblPlaca;
+	private javax.swing.JLabel lblNumChasis;
+	private javax.swing.JLabel lblNumCajones;
 	private javax.swing.JPanel jPanel1;
 	private javax.swing.JScrollPane jScrollPane1;
 	private javax.swing.JTable tblInformacion;
@@ -404,5 +410,4 @@ public class VentanaPrincipal extends javax.swing.JFrame {
 	private javax.swing.JTextField txtPlaca;
 	private javax.swing.JTextField txtPrecio;
 	private javax.swing.JTextField txtProcesador;
-	// End of variables declaration//GEN-END:variables
 }
